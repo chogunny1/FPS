@@ -441,7 +441,7 @@ MonoBehaviour:
   EnemyType: 1
   maxHealth: 100
   curHealth: 100
-  target: {fileID: 0}
+  target: {fileID: 2555345575808480542, guid: 071b76af7079b7a4d852ba7fe2969d9c, type: 3}
   isChase: 0
   meleeArea: {fileID: 4612891488877383331}
   bullet: {fileID: 0}

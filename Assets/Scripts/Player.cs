@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public GameObject[] bullets;
     public GameObject[] coins;
     public GameObject grenadObject;
-    public GameManager manager;
+    //public GameManager manager;
 
     public GameObject tab;
 
@@ -411,6 +411,13 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        else if (other.tag == "Enemy")
+        {
+            if(!isDamage)
+            {
+
+            }
+        }
     }
 
     IEnumerator Ondamage(bool isBossAtk)
@@ -445,7 +452,7 @@ public class Player : MonoBehaviour
     {
         anim.SetTrigger("doDie");
         isDead = true;
-        manager.GameOver();
+        //manager.GameOver();
     }
 
     void OnTriggerStay(Collider other)

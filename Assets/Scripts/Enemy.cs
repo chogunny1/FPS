@@ -12,10 +12,11 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public bool isChase;
 
+    private Player pl;
+
     public BoxCollider meleeArea;
     public GameObject bullet;
     public GameObject[] coins;
-    public GameManager manager;
     public bool isAttack;
     public bool isDead;
 
@@ -148,7 +149,7 @@ public class Enemy : MonoBehaviour
                 Rigidbody bulletRigd = instantBullet.GetComponent<Rigidbody>();
                 bulletRigd.velocity = transform.forward * 20;
                 yield return new WaitForSeconds(1f);
-                Destroy(bulletRigd);
+                Destroy(instantBullet);
                 break;
         }
 
@@ -174,7 +175,7 @@ public class Enemy : MonoBehaviour
         }
         else
         { 
-            gameObject.layer = 13;
+            gameObject.layer = 16;
             isDead = true;
             isChase = false;
             nav.enabled = false;
@@ -184,21 +185,21 @@ public class Enemy : MonoBehaviour
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity);
 
-            switch(EnemyType)
-            {
-                case Type.A:
-                    manager.enemyA--;
-                    break;
-                case Type.B:
-                    manager.enemyB--;
-                    break;
-                case Type.C:
-                    manager.enemyC--;
-                    break;
-                case Type.BOSS:
-                    manager.enemyD--;
-                    break;
-            }
+            //switch(EnemyType)
+            //{
+            //    case Type.A:
+            //        manager.enemyA--;
+            //        break;
+            //    case Type.B:
+            //        manager.enemyB--;
+            //        break;
+            //    case Type.C:
+            //        manager.enemyC--;
+            //        break;
+            //    case Type.BOSS:
+            //        manager.enemyD--;
+            //        break;
+            //}
 
 
             reactVec = reactVec.normalized;

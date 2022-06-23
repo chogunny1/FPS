@@ -5210,7 +5210,7 @@ MonoBehaviour:
   EnemyType: 2
   maxHealth: 40
   curHealth: 40
-  target: {fileID: 0}
+  target: {fileID: 2555345575808480542, guid: 071b76af7079b7a4d852ba7fe2969d9c, type: 3}
   isChase: 0
   meleeArea: {fileID: 0}
   bullet: {fileID: 1576754883486822050, guid: 6e1270541bd5e404aa83a651366229aa, type: 3}

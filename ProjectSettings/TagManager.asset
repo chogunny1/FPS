@@ -22,7 +22,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - EnemyBullet
   - PostProcessing
   - Floor
   - FirstPersonWeapon
@@ -32,7 +32,7 @@ TagManager:
   - Bullet
   - Wall
   - Enemy
-  - 
+  - EnemyDead
   - 
   - 
   - 
