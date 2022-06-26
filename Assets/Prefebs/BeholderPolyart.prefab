@@ -5218,7 +5218,6 @@ MonoBehaviour:
   - {fileID: 5925603756365491477, guid: 758afc126df0338499a76cf2ef9f9a5b, type: 3}
   - {fileID: 1366296752922365358, guid: 4cb15496d95826e4397f7e369547fa25, type: 3}
   - {fileID: 5332779305775267021, guid: 7a362ececfad8d445aa03495b629ea82, type: 3}
-  manager: {fileID: 0}
   isAttack: 0
   isDead: 0
 --- !u!1 &6493547925602658194

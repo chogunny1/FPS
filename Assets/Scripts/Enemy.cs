@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour
 
     public BoxCollider meleeArea;
     public GameObject bullet;
+    public GameManager manager;
     public GameObject[] coins;
     public bool isAttack;
     public bool isDead;
@@ -27,7 +29,18 @@ public class Enemy : MonoBehaviour
     protected ParticleSystem par;
     protected NavMeshAgent nav;
     protected Animator anim;
+
+    //public GameObject hpBarPr;
+    //public Vector3 hpBarOffset = new Vector3(0, 2.2f, 0);
+    //private Canvas uiCanvas;
+    //private Image hpBarImage;
+
     // Start is called before the first frame update
+
+    //private void Start()
+    //{
+    //    //SetHpBar();
+    //}
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -42,6 +55,17 @@ public class Enemy : MonoBehaviour
             Invoke("ChaseStart", 2);
         }
     }
+
+    //void SetHpBar()
+    //{
+    //    uiCanvas = GameObject.Find("UI Canvas").GetComponent<Canvas>();
+    //    GameObject hpBar = Instantiate<GameObject>(hpBarPr, uiCanvas.transform);
+    //    hpBarImage = hpBar.GetComponentsInChildren<Image>()[1];
+
+    //    var _hpbar = hpBar.GetComponent<EnemyHpBar>();
+    //    _hpbar.targetT = this.gameObject.transform;
+    //    _hpbar.offset = hpBarOffset;
+    //}
 
     void ChaseStart()
     {
@@ -65,6 +89,7 @@ public class Enemy : MonoBehaviour
         {
             Weapon weapon = other.GetComponent<Weapon>();
             curHealth -= weapon.damage;
+            //pBarImage.fillAmount= curHealth/maxHealth;
             Vector3 reactVec = transform.position - other.transform.position;
 
 
@@ -75,6 +100,7 @@ public class Enemy : MonoBehaviour
         {
             Bullet bullet = other.GetComponent<Bullet>();
             curHealth -= bullet.damage;
+            //hpBarImage.fillAmount = curHealth / maxHealth;
             Vector3 reactVec = transform.position - other.transform.position;
 
             Destroy(other.gameObject);
@@ -93,8 +119,8 @@ public class Enemy : MonoBehaviour
             switch (EnemyType)
             {
                 case Type.A:
-                    targetRadius = 1.5f;
-                    targetRange = 3f;
+                    targetRadius = 1;
+                    targetRange = 4f;
                     break;
                 case Type.B:
                     targetRadius = 1f;
@@ -185,21 +211,21 @@ public class Enemy : MonoBehaviour
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity);
 
-            //switch(EnemyType)
-            //{
-            //    case Type.A:
-            //        manager.enemyA--;
-            //        break;
-            //    case Type.B:
-            //        manager.enemyB--;
-            //        break;
-            //    case Type.C:
-            //        manager.enemyC--;
-            //        break;
-            //    case Type.BOSS:
-            //        manager.enemyD--;
-            //        break;
-            //}
+            switch (EnemyType)
+            {
+                case Type.A:
+                    manager.enemyA--;
+                    break;
+                case Type.B:
+                    manager.enemyB--;
+                    break;
+                case Type.C:
+                    manager.enemyC--;
+                    break;
+                //case Type.BOSS:
+                //    manager.enemyD--;
+                //    break;
+            }
 
 
             reactVec = reactVec.normalized;

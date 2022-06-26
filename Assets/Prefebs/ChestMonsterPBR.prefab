@@ -449,9 +449,11 @@ MonoBehaviour:
   - {fileID: 5925603756365491477, guid: 758afc126df0338499a76cf2ef9f9a5b, type: 3}
   - {fileID: 1366296752922365358, guid: 4cb15496d95826e4397f7e369547fa25, type: 3}
   - {fileID: 5332779305775267021, guid: 7a362ececfad8d445aa03495b629ea82, type: 3}
-  manager: {fileID: 0}
   isAttack: 0
   isDead: 0
+  hpBarPr: {fileID: 3626059581490524084, guid: ee1c5e2485b6d944691c46290b1fce04, type: 3}
+  hpBarOffset: {x: 0, y: 2.2, z: 0}
+  uiCanvas: {fileID: 0}
 --- !u!195 &4612891488868523548
 NavMeshAgent:
   m_ObjectHideFlags: 0

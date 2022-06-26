@@ -80,6 +80,8 @@ public class Boss : Enemy
         bossMissleB.target = target;
 
         yield return new WaitForSeconds(2f);
+        Destroy(bossMissleA);
+        Destroy(bossMissleB);
 
         StartCoroutine(Think());
     }
