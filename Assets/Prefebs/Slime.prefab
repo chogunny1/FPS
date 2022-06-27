@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 7672570159804192703}
   - component: {fileID: 7672570159804192700}
   - component: {fileID: -6411376101973868916}
+  - component: {fileID: -3661539348838640940}
   m_Layer: 16
   m_Name: Slime
   m_TagString: Enemy
@@ -168,7 +169,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 190c04ee61aaa410e8650f7fc1ce7f41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -203,21 +204,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  maxHealth: 50
-  curHealth: 50
+  maxHealth: 100
+  curHealth: 100
   target: {fileID: 2555345575808480542, guid: 071b76af7079b7a4d852ba7fe2969d9c, type: 3}
   isChase: 0
   meleeArea: {fileID: 8833008425646234934}
   bullet: {fileID: 0}
+  manager: {fileID: 0}
   coins:
   - {fileID: 5925603756365491477, guid: 758afc126df0338499a76cf2ef9f9a5b, type: 3}
   - {fileID: 1366296752922365358, guid: 4cb15496d95826e4397f7e369547fa25, type: 3}
   - {fileID: 5332779305775267021, guid: 7a362ececfad8d445aa03495b629ea82, type: 3}
   isAttack: 0
   isDead: 0
-  hpBarPr: {fileID: 3626059581490524084, guid: ee1c5e2485b6d944691c46290b1fce04, type: 3}
-  hpBarOffset: {x: 0, y: 2.2, z: 0}
-  uiCanvas: {fileID: 0}
 --- !u!195 &7672570159804192700
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -255,6 +254,19 @@ MonoBehaviour:
   damage: 20
   isMelee: 1
   isRock: 0
+--- !u!114 &-3661539348838640940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7672355187714495697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38d7527f767c5f4b93d1076f0a57fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7672355187714495697}
 --- !u!1 &7672426175357041863
 GameObject:
   m_ObjectHideFlags: 0

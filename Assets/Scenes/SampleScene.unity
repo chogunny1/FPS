@@ -6111,8 +6111,8 @@ MonoBehaviour:
   coin: 0
   ammo: 100
   hasGrenades: 0
-  Maxhealth: 100
-  Maxcoin: 9999
+  Maxhealth: 300
+  Maxcoin: 1000000
   Maxammo: 999
   MaxhasGrenades: 4
   isAttack: 0
@@ -11212,7 +11212,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616578946}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!1 &624722536
 GameObject:
   m_ObjectHideFlags: 0
@@ -16744,7 +16744,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875606707}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!1001 &879676478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29007,7 +29007,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820678075}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1829685236
 GameObject:
   m_ObjectHideFlags: 0
@@ -44970,9 +44970,9 @@ MonoBehaviour:
   - {fileID: 1209560513}
   Bosszone: {fileID: 2083063562}
   enemies:
-  - {fileID: 6493547925602658192, guid: 40f326a1291da60499a4638452a681ff, type: 3}
   - {fileID: 7672355187714495697, guid: 008dd548591fa344d80adfa0f99abcd5, type: 3}
   - {fileID: 2247866296466874671, guid: c5fea73c6f6bdbf42b619075eed374d0, type: 3}
+  - {fileID: 6493547925602658192, guid: 40f326a1291da60499a4638452a681ff, type: 3}
   bosss: {fileID: 7386821730851772590, guid: 28f98ab03fa088d4cad7742cb83693e7, type: 3}
   enemyList: 
   bossList: 

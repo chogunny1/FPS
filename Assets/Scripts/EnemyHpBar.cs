@@ -1,48 +1,35 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//public class EnemyHpBar : MonoBehaviour
-//{
-//    private Camera uiCamera;
-//    private Canvas canvas;
-//    private RectTransform rectTransform;
-//    private RectTransform rectHP;
+public class EnemyHpBar : MonoBehaviour
+{
+    //[SerializeField] GameObject Enemy = null;
 
-//    [HideInInspector] public Vector3 offset  = Vector3.zero;    
-//    [HideInInspector] public Transform targetT;
-    
+    //List<Transform> targets = new List<Transform>();
+    //List<GameObject> hpBar = new List<GameObject>();
 
+    //Camera cam = null;
 
+    //private void Start()
+    //{
+    //    cam = Camera.main;
 
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-//        canvas = GetComponentInParent<Canvas>();
-//        uiCamera = canvas.worldCamera;
-//        rectTransform = canvas.GetComponent<RectTransform>();
-//        rectHP = this.gameObject.GetComponent<RectTransform>();
-//    }
+    //    GameObject[] objects = GameObject.FindGameObjectsWithTag("Enemy");
+    //    for(int i = 0; i < objects.Length; i++)
+    //    {
+    //        targets.Add(objects[i].transform);
+    //        GameObject HPBar = Instantiate(Enemy, objects[i].transform.position,Quaternion.identity,transform);
+    //        hpBar.Add(HPBar);
+    //    }
+    //}
 
-//    // Update is called once per frame
-//    void Update()
-//    {
-        
-//    }
+    //private void Update()
+    //{
+    //    for(int i = 0; i < targets.Count;  i++)
+    //    {
+    //        hpBar[i].transform.position = cam.WorldToScreenPoint(targets[i].position + new Vector3(0,1.15f,0));
+    //    }
 
-//    private void LateUpdate()
-//    {
-//        var screenPos = Camera.main.WorldToScreenPoint(targetT.position + offset);
-
-//        //if(screenPos.z < 0.0f)
-//        //{
-//        //    screenPos *= -1.0f;
-//        //}
-
-//        var localPos = Vector2.zero;
-//        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform,screenPos,uiCamera
-//            , out localPos);
-
-//        rectHP.localPosition = localPos;    
-//    }
-//}
+    //}
+}

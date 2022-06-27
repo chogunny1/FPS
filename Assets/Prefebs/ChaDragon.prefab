@@ -849,6 +849,7 @@ GameObject:
   - component: {fileID: 7386821732089062480}
   - component: {fileID: 7386821732089062483}
   - component: {fileID: 7386821732089062482}
+  - component: {fileID: 2396519806385362555}
   m_Layer: 16
   m_Name: ChaDragon
   m_TagString: Enemy
@@ -937,21 +938,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 3
-  maxHealth: 300
-  curHealth: 300
+  maxHealth: 1000
+  curHealth: 1000
   target: {fileID: 2555345575808480542, guid: 071b76af7079b7a4d852ba7fe2969d9c, type: 3}
   isChase: 0
   meleeArea: {fileID: 7386821730577700021}
   bullet: {fileID: 5827919733893667658, guid: 37145b4bb1439834d8a955b77692a009, type: 3}
+  manager: {fileID: 0}
   coins:
   - {fileID: 5925603756365491477, guid: 758afc126df0338499a76cf2ef9f9a5b, type: 3}
   - {fileID: 1366296752922365358, guid: 4cb15496d95826e4397f7e369547fa25, type: 3}
   - {fileID: 5332779305775267021, guid: 7a362ececfad8d445aa03495b629ea82, type: 3}
   isAttack: 0
   isDead: 0
-  hpBarPr: {fileID: 3626059581490524084, guid: ee1c5e2485b6d944691c46290b1fce04, type: 3}
-  hpBarOffset: {x: 0, y: 2.2, z: 0}
-  uiCanvas: {fileID: 0}
   missile: {fileID: 7579490160562416356, guid: d7cf12a1a93051b41b6edd77de640b6c, type: 3}
   missilePortA: {fileID: 7386821732234444123}
   missilePortB: {fileID: 7386821730742400072}
@@ -978,6 +977,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2396519806385362555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386821730851772590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38d7527f767c5f4b93d1076f0a57fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7386821730851772590}
 --- !u!1 &7386821730851773818
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -18,6 +19,8 @@ public class Player : MonoBehaviour
     public GameObject[] coins;
     public GameObject grenadObject;
     public GameManager manager;
+
+    private Enemy enemy;
 
     public GameObject tab;
 
@@ -444,6 +447,7 @@ public class Player : MonoBehaviour
 
         if(health <= 0)
         {
+            gameObject.layer = 18;
             Ondie();
         }
     }
@@ -452,7 +456,12 @@ public class Player : MonoBehaviour
     {
         anim.SetTrigger("doDie");
         isDead = true;
-        manager.GameOver();
+        Invoke("DeathScene",2f);
+    }
+
+    void DeathScene()
+    {
+        SceneManager.LoadScene("Start");
     }
 
     void OnTriggerStay(Collider other)

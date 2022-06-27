@@ -201,7 +201,6 @@ public class Enemy : MonoBehaviour
         }
         else
         { 
-            gameObject.layer = 16;
             isDead = true;
             isChase = false;
             nav.enabled = false;
@@ -233,8 +232,8 @@ public class Enemy : MonoBehaviour
             isPartic = true;
             par.Play();
             rb.AddForce(reactVec * 1,ForceMode.Impulse);
-
-                Destroy(gameObject, 4);
+            gameObject.layer = 17;
+            Destroy(gameObject, 0);
         }
     }
 }

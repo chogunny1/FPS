@@ -77,10 +77,13 @@ public class GameManager : MonoBehaviour
         player.transform.position = Vector3.up * -2f;
     }
 
-    public void GameOver()
+
+    IEnumerator Game()
     {
-        SceneManager.LoadScene("Start");
+        yield return new WaitForSeconds(4f);
     }
+
+
 
     IEnumerator InBattle()
     {
