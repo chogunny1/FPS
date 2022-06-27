@@ -45064,7 +45064,7 @@ MonoBehaviour:
   startzone: {fileID: 624722536}
   EnemyZone: {fileID: 1960273484}
   BossZone: {fileID: 1917721798}
-  d: {fileID: 0}
+  d: {fileID: 1794163282}
   stage: 1
   playeTime: 0
   isBattle: 0
