@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator BossBattle()
     {
-        if (stage == 10)
+        if (stage >= 10)
         {
             for (int i = 0; i < stage; i++)
             {

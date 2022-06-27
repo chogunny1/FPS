@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    public GameObject ob;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,14 @@ public class SceneChange : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Explanation()
+    {
+        ob.SetActive(true);
+    }
+    public void Explanation1()
+    {
+        ob.SetActive(false);
     }
 }
